@@ -121,6 +121,10 @@
   - "restart edxapp"
   - "restart edxapp_workers"
 
+# Create the virtualenv, configure it to use pypy
+- name: Create virtualenv using the pypy interpreter
+  shell: "virtualenv -p `which pypy` {{ edxapp_venv_dir }}"
+  sudo_user: "{{ edxapp_user }}"
 
 # Install the python pre requirements into {{ edxapp_venv_dir }}
 - name : install python pre-requirements

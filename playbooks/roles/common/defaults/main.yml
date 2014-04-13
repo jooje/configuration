@@ -61,6 +61,7 @@ common_debian_pkgs:
   - python2.7
   - python-pip
   - python2.7-dev
+  - pypy
   # Not installed by default on vagrant ubuntu
   # boxes
   - curl
